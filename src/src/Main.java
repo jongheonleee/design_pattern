@@ -2,41 +2,60 @@ import patterns.iterator.implement.Book;
 import patterns.iterator.implement.BookShelf;
 import patterns.iterator.implement.BookShelf2;
 import patterns.iterator.implement.BookShelfInterface;
-import patterns.iterator.implement.Iterator;
+//import patterns.iterator.implement.Iterator;
+import patterns.iterator.practice.practice01.Ball;
+import patterns.iterator.practice.practice01.BallBox;
+import patterns.iterator.practice.practice01.BallBoxIterator;
+import patterns.iterator.practice.practice01.BaseBall;
+import patterns.iterator.practice.practice01.BaseBallPlayer;
+import patterns.iterator.practice.practice01.BasketBall;
+import patterns.iterator.practice.practice01.BasketBallPlayer;
+import patterns.iterator.practice.practice01.Iterator;
+import patterns.iterator.practice.practice01.TennisBall;
+import patterns.iterator.practice.practice01.TennisPlayer;
 
 public class Main {
 
-    private static void showAllBooks(BookShelfInterface bookShelf) {
-        Iterator<Book> it = bookShelf.iterator();
-        while(it.hasNext()) {
-            System.out.println(it.next());
-        }
-    }
 
     public static void main(String[] args) {
         // 0. 세팅
-        BookShelfInterface bookShelfWithArr = new BookShelf(4);
-        BookShelfInterface bookShelfWithList= new BookShelf2(4);
+        BallBox<Ball> box = new BallBox<>();
+        BaseBallPlayer baseBallPlayer = new BaseBallPlayer();
+        BasketBallPlayer basketBallPlayer = new BasketBallPlayer();
+        TennisPlayer tennisPlayer = new TennisPlayer();
 
-        bookShelfWithArr.appendBook(new Book("Around the World in 80 Days"));
-        bookShelfWithArr.appendBook(new Book("Bible"));
-        bookShelfWithArr.appendBook(new Book("Cinderella"));
-        bookShelfWithArr.appendBook(new Book("Daddy-Long-Legs"));
+        for (int i=0; i<30; i++) {
+            if (0 <= i && i < 10) {
+                box.addBall(new BaseBall());
+            } else if (10 <= i && i < 24) {
+                box.addBall(new BasketBall());
+            } else {
+                box.addBall(new TennisBall());
+            }
+        }
+        Iterator it = box.iterate();
+        while (it.hasNext()) {
+            Ball ball = it.next();
+            System.out.println(ball);
+        }
 
-        bookShelfWithList.appendBook(new Book("Around the World in 80 Days"));
-        bookShelfWithList.appendBook(new Book("Bible"));
-        bookShelfWithList.appendBook(new Book("Cinderella"));
-        bookShelfWithList.appendBook(new Book("Daddy-Long-Legs"));
-        bookShelfWithList.appendBook(new Book("Daddy-Long-Legs2"));
-        bookShelfWithList.appendBook(new Book("Daddy-Long-Legs3"));
-        bookShelfWithList.appendBook(new Book("Daddy-Long-Legs4"));
+        BallBoxIterator it2 = (BallBoxIterator) box.iterate();
+        while (it2.hasBaseBall()) {
+            baseBallPlayer.add(it2.nextBaseBall());
+        }
+        while (it2.hasBasketBall()) {
+            basketBallPlayer.add(it2.nextBasketBall());
+        }
 
-        // 1. Iterator pattern 활용
-        System.out.println("== BookShelfWithArr ==");
-        showAllBooks(bookShelfWithArr);
+        System.out.println();
+        while (it2.hasTennisBall()) {
+            TennisBall tennisBall = it2.nextTennisBall();
+            System.out.println(tennisBall);
+            tennisPlayer.add(tennisBall);
+        }
 
-        System.out.println("== BookShelfWithList ==");
-        showAllBooks(bookShelfWithList);
-
+        System.out.println(baseBallPlayer.size());
+        System.out.println(basketBallPlayer.size());
+        System.out.println(tennisPlayer.size());
     }
 }
