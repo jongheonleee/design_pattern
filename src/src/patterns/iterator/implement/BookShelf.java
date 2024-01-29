@@ -1,6 +1,9 @@
 package patterns.iterator.implement;
 
-public class BookShelf implements Iterable<Book> {
+/**
+ * 역할 - 구체적인 집합체
+ */
+public class BookShelf implements BookShelfInterface{
     private Book[] books;
     private int last = 0;
 
