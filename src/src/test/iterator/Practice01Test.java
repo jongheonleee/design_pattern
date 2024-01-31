@@ -1,11 +1,10 @@
-package patterns.iterator.test;
+package test.iterator;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.ValueSource;
 import patterns.iterator.practice.practice01.Ball;
 import patterns.iterator.practice.practice01.BallBox;
 import patterns.iterator.practice.practice01.BallBoxIterator;
