@@ -1,6 +1,6 @@
 package patterns.templateMethod.implement;
 
-public class ChairDisplay extends AbstractDisplay {
+public class ChairDisplay implements AbstractDisplay2 {
     private char ch;
 
     public ChairDisplay(char ch) {

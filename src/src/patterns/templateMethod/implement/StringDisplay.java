@@ -1,6 +1,6 @@
 package patterns.templateMethod.implement;
 
-public class StringDisplay extends AbstractDisplay {
+public class StringDisplay implements AbstractDisplay2 {
     private String string;
     private int width;
 
@@ -29,6 +29,6 @@ public class StringDisplay extends AbstractDisplay {
         for (int i=0; i<width; i++) {
             System.out.print("-");
         }
-        System.out.print("+");
+        System.out.print("+\n");
     }
 }
