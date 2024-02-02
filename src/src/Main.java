@@ -1,23 +1,24 @@
-import java.io.IOException;
-import patterns.adapter.implement.FileIO;
-import patterns.adapter.implement.FileProperties;
-import patterns.adapter.practice.practiceByInstance.practice01.Client;
-import patterns.templateMethod.implement.AbstractDisplay2;
-import patterns.templateMethod.implement.ChairDisplay;
-import patterns.templateMethod.implement.StringDisplay;
-//import patterns.iterator.implement.Iterator;
-
+import patterns.factoryMethod.implement.framework.Factory;
+import patterns.factoryMethod.implement.framework.Product;
+import patterns.factoryMethod.implement.idcard.IDCardFactory;
+import patterns.factoryMethod.implement.laptop.LaptopFactory;
 
 public class Main {
 
-
     public static void main(String[] args) {
-        AbstractDisplay2 ac = new ChairDisplay('#');
-        AbstractDisplay2 as = new StringDisplay("Hello");
+        Factory factory = new IDCardFactory();
 
-        ac.display();
-        System.out.println();
-        as.display();
+        Product[] cards = new Product[3];
+        Product card1 = factory.create("Lee");
+        Product card2 = factory.create("Su");
+        Product card3 = factory.create("Hong");
 
+        cards[0] = card1;
+        cards[1] = card2;
+        cards[2] = card3;
+
+        for (int i=0; i<3; i++) {
+            cards[i].use();
+        }
     }
 }

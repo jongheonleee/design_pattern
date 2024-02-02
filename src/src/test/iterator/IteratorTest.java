@@ -26,7 +26,7 @@ class Expect {
     }
 }
 
-public class Practice01Test {
+public class IteratorTest {
 
     BallBox<Ball> ballBox;
     BaseBallPlayer baseBallPlayer;
