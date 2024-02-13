@@ -1,24 +1,32 @@
-import patterns.factoryMethod.implement.framework.Factory;
-import patterns.factoryMethod.implement.framework.Product;
-import patterns.factoryMethod.implement.idcard.IDCardFactory;
-import patterns.factoryMethod.implement.laptop.LaptopFactory;
+import patterns.prototype.framework.Product;
+import patterns.prototype.MessageBox;
+import patterns.prototype.UnderlinePen;
+import patterns.prototype.framework.Manager;
 
 public class Main {
 
     public static void main(String[] args) {
-        Factory factory = new IDCardFactory();
+        // 준비
+        Manager manager = new Manager();
+        UnderlinePen upen = new UnderlinePen('-');
+        MessageBox mbox = new MessageBox('*');
+        MessageBox sbox = new MessageBox('/');
 
-        Product[] cards = new Product[3];
-        Product card1 = factory.create("Lee");
-        Product card2 = factory.create("Su");
-        Product card3 = factory.create("Hong");
+        // 등록
+        manager.register("strong message", upen);
+        manager.register("warning box", mbox);
+        manager.register("slash box", sbox);
 
-        cards[0] = card1;
-        cards[1] = card2;
-        cards[2] = card3;
+        // 생성과 사용
+        Product p1 = manager.create("strong message");
+        p1.use("Hello World");
 
-        for (int i=0; i<3; i++) {
-            cards[i].use();
-        }
+        Product p2 = manager.create("warning box");
+        p2.use("Hello World");
+
+        Product p3 = manager.create("slash box");
+        p3.use("Hello World");
+
+
     }
 }
