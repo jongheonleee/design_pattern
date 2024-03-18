@@ -1,6 +1,5 @@
-import patterns.flyweight.BigString;
-import patterns.proxy.Printable;
-import patterns.proxy.PrinterProxy;
+import patterns.proxy.implement.Printable;
+import patterns.proxy.implement.PrinterProxy;
 
 public class Main {
 

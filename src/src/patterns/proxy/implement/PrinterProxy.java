@@ -1,4 +1,4 @@
-package patterns.proxy;
+package patterns.proxy.implement;
 
 
 // 이름 붙인 프린터를 나타내는 클래스(대리인)

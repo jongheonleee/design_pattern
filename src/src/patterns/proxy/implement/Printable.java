@@ -1,4 +1,4 @@
-package patterns.proxy;
+package patterns.proxy.implement;
 
 // Printer 와 PrinterProxy 의 공통 인터페이스
 public interface Printable {
