@@ -37,6 +37,7 @@
 
 ### 3. Prototype : 원형 등록, 필요시 복제품 사용 
 
+<img src="https://github.com/jongheonleee/design_pattern_java/assets/87258372/a498a8d1-ee5a-4082-9c08-a72648692c87" width="500" height="500"/>
 
 > ### 👉 생성이 어렵거나 복잡한 인스턴스를 생성하고 맵에 등록하여 추후에는 복제해서 사용 
 
