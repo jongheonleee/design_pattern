@@ -20,6 +20,8 @@
 
 ### 2. Flyweight
 
+<img src="https://github.com/jongheonleee/design_pattern_java/assets/87258372/3dd289aa-297c-48d0-a635-67251501da59" width="500" height="500"/>
+
 > ### 👉 n개의 인스턴스를 한번만 생성하고 맵에 등록하여 공유한다  
 
 - Singleton 의 확장 버전, Singleton은 인스턴스 1개 생성을 절약하려는 의도. Flyweight는 인스턴스 n개 생성을 절약하려는 의도
