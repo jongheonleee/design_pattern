@@ -104,6 +104,10 @@
 
 ### 2. Template Method Pattern : 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
 
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de37b59b-91d9-4b0d-a89b-30a3fb1c16c3" width="500" height="500"/>
+
+
 > ### 👉 변경되는 것과 변경되지 않는 것의 분리, 즉, 불변과 가변의 분리
 - 기존에 서로 관련도 높은 것들 끼리 묶음. 하지만, 그 내부에서 변경 시점이 서로 다른 경우 분리함
 - 변경되는 것과 변경되지 않는 것의 분리
