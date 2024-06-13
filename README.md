@@ -165,7 +165,7 @@
 
 ### 4. Bridge : 기능(선언)과 구현을 분리
 
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/a1e3c695-9adf-4af5-af91-5b3f976f54ee" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/cdb6e844-e33c-4054-838f-2e52836ed288" width="500" height="500"/>
 
 
 > ### 👉 변경되는 것과 변경되지 않는 것의 분리, 즉, 불변과 가변의 분리
