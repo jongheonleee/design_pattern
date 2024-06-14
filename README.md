@@ -94,12 +94,18 @@
 - 스프링은 제어의 역전, 즉 사용과 생성을 분리함. 따라서, 스프링 컨테이너에서 빈을 생성 및 등록 그리고 관리해줌(생성). 개발자는 해당 빈을 사용하기만 하면됨
 - 물론, 빈은 크게 두 부류로 등록됨, Singleton과 Prototype으로 등록됨
 
+
+<br>
+
+### 4. Builder 
+
+
 <br>
 <br>
 
 ##  📌 02. 변경되는 부분을 분리
 
-### 1. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
+### 5. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9459b35d-8b18-48f6-afd3-b4f508a4bf4c" width="500" height="500"/>
 
@@ -115,7 +121,7 @@
 
 <br>
 
-### 2. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
+### 6. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de37b59b-91d9-4b0d-a89b-30a3fb1c16c3" width="500" height="500"/>
@@ -145,7 +151,7 @@
 
 <br>
 
-### 3. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
+### 7. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0f20b692-fcff-4e2f-88e0-40092bd68a80" width="500" height="500"/>
 
@@ -171,7 +177,7 @@
 
 <br>
 
-### 4. Bridge : 기능(선언)과 구현을 타입 단위로 분리
+### 8. Bridge : 기능(선언)과 구현을 타입 단위로 분리
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/cdb6e844-e33c-4054-838f-2e52836ed288" width="500" height="500"/>
 
@@ -189,7 +195,7 @@
 
 <br>
 
-### 5. State : 상태(지속적으로 변경)를 타입 단위로 분리 
+### 9. State : 상태(지속적으로 변경)를 타입 단위로 분리 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de4170c3-a887-46f2-9002-4ba69801175d" width="500" height="500"/>
 
@@ -205,5 +211,41 @@
 
 
 
+<br>
+<br>
+
+##  📌 03. 동일시 취급한다(다형성 활용)
+
+<br>
+
+### 10. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
+> ### 👉 동일시 취급하여 재귀적 구조를 형성함 
+- 내용과 그릇의 공통점을 추출해서 상위 추상 클래스 정의(Template Method)
+- 재귀적으로 해당 타입을 추가할 수 있음, 예를 들어서 파일과 폴더 구조가 있음(트리 형성)
+- 재귀구조의 장점은 유연함, 동적으로 추가하거나 삭제하기 편리함 
+
+
+
+
+<br>
+
+### 11. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+
+> ### 👉 상속과 포함을 동시에 구현 
+- 군인에게 총, 칼, 대포, ,,, 여러 무기를 장착해도 군인임은 변함없음
+- 즉, 장식과 내용을 분리하고 내용에 장식을 지속적으로 추가해도 내용이 바뀌지 않음(다형성)
+- 장식과 내용을 분리해두었다가 맥락에 맞게 합쳐서 사용함
+  - 여러기능을 동적으로 추가할 수 있음
+
+> ### 👉 Template Method, Bridge 적용 
+- 장식과 내용물의 공통 부분을 상위 추상 클래스로 정의(Template Method)
+- 생성자의 매개변수로 내용을 주입(Bridge), 겉에는 껍데기 클래스로 부가 기능을 가지고 있음
+- Display d = new Border(new StringDisplay); - Border : 껍데기, StringDisplay : 알맹이 
+  - 외부에서 아무리 껍데기를 추가해도 알맹이는 변하지 않음 
+  - Display d = new BorderN(...new Border2(new Border(new StringDisplay))...);
+
+> ### 👉 자바에서 활용
+- IO 관련 클래스에서 많이 활용됨
+  - Scanner sc = new Scanner(new InputStream()) ... 
