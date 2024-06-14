@@ -221,6 +221,8 @@
 ### 10. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9a3cb768-7edc-4adc-922c-2f44629b9f79" width="500" height="500"/>
+
 > ### 👉 동일시 취급하여 재귀적 구조를 형성함 
 - 내용과 그릇의 공통점을 추출해서 상위 추상 클래스 정의(Template Method)
 - 재귀적으로 해당 타입을 추가할 수 있음, 예를 들어서 파일과 폴더 구조가 있음(트리 형성)
@@ -232,6 +234,9 @@
 <br>
 
 ### 11. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/1bf3bf68-7313-4a1c-a45e-75dbf473fe5d" width="500" height="500"/>
 
 > ### 👉 상속과 포함을 동시에 구현 
 - 군인에게 총, 칼, 대포, ,,, 여러 무기를 장착해도 군인임은 변함없음
