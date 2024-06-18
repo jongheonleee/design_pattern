@@ -271,6 +271,8 @@
 
 ### 12. Proxy : 대리인(매니저)을 통해 특정 객체를 사용한다 
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/6e9d975c-e003-4d66-ace6-1af98276f4d6" width="500" height="500"/>
+
 > ### 👉 '대리인(매니저)' 와 '본인'을 분리하여 동일시 취급
 - 근본적인 이유는 클라이언트가 '대리인(매니저)'를 통해서 '본인'을 사용
 - 따라서, 인터페이스로 '대리인'과 '본인'을 동일시 취급
@@ -295,6 +297,8 @@
 <br>
 
 ### 13. Adapter : 특정 클래스를 부품으로서 연결하다 
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/e1bf5d8d-15e7-43a4-801c-1b91f29d542f" width="500" height="500"/>
 
 > ### 👉 '제공된 것' 과 '제공할 것'을 연결
 - 특정 클래스를 부품으로써 재사용하고 싶을 때 주로 사용하는 패턴
