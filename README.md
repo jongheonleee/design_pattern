@@ -238,13 +238,26 @@
 - 이는 Command 패턴도 적용됨 
 
 <br>
+
+### 10. Factory Method : '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 분리, 패키지 단위 분리
+
+> ### 👉 '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 패키지 단위로 분리
+- 인스턴스 생성 흐름, 방법을 변경 관점에서 분리
+- 이를 패키지 단위로 분리함
+- 상위 패키지는 1개, 하위 패키지는 n개 -> OCP 충족
+
+> ### 👉 템플릿 메서드의 확장 버전
+- 템플릿 메서드는 클래스 단위에서 분리, 상위 클래스 - 하위 클래스
+- Factory Method는 패키지 단위에서 분리, 상위 패키지 - 하위 패키지 
+
+<br>
 <br>
 
 ##  📌 03. 동일시 취급한다(다형성 활용)
 
 <br>
 
-### 10. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
+### 11. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9a3cb768-7edc-4adc-922c-2f44629b9f79" width="500" height="500"/>
@@ -259,7 +272,7 @@
 
 <br>
 
-### 11. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+### 12. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/1bf3bf68-7313-4a1c-a45e-75dbf473fe5d" width="500" height="500"/>
@@ -283,7 +296,7 @@
 
 <br>
 
-### 12. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
+### 13. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/6e9d975c-e003-4d66-ace6-1af98276f4d6" width="500" height="500"/>
 
@@ -305,7 +318,7 @@
 
 <br>
 
-### 13. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
+### 14. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/89800a75-d049-4ba8-a4d9-ae7e330c96f7" width="500" height="500"/>
 
@@ -329,7 +342,7 @@
 ##  📌 03. 연결한다(코드 재사용)
 <br>
 
-### 14. Adapter : 특정 클래스를 부품으로서 연결하다 
+### 15. Adapter : 특정 클래스를 부품으로서 연결하다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/e1bf5d8d-15e7-43a4-801c-1b91f29d542f" width="500" height="500"/>
 
