@@ -241,6 +241,8 @@
 
 ### 10. Factory Method : '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 분리, 패키지 단위 분리
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/64fb1aad-569d-44d5-b9b2-31a96cd270e0" width="500" height="500"/>
+
 > ### 👉 '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 패키지 단위로 분리
 - 인스턴스 생성 흐름, 방법을 변경 관점에서 분리
 - 이를 패키지 단위로 분리함
