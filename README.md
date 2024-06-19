@@ -4,7 +4,7 @@
 > ### 📌 00. 디자인패턴을 학습하기 앞서
 > ### 📌 01. 인스턴스를 효율적으로 생성(4) 
 > ### 📌 02. 변경되는 부분을 분리(5)
-> ### 📌 03. 동일시 취급한다(3) 
+> ### 📌 03. 동일시 취급한다(4) 
 > ### 📌 04. 연결한다(1)
 
 <br>
@@ -306,6 +306,11 @@
 <br>
 
 ### 13. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/89800a75-d049-4ba8-a4d9-ae7e330c96f7" width="500" height="500"/>
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/a6c093ea-7bed-4daa-bf48-3d38fb38ec34" width="500" height="500"/>
+
 
 > ### 👉 명령을 하나의 타입으로 표현해서 집합으로 사용 
 - 명령어의 경우, 스택에 쌓임.
