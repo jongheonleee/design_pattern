@@ -339,13 +339,20 @@
 
 ### 17. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/11cdb904-97c0-4c7d-8e12-54d216656efe" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0452798d-1d2c-46da-a9c2-600a04381444" width="500" height="500"/>
+
 > ### 👉 책임을 떠넘기다?
 - '해결책'을 하나로 묶음. 이때 링크드 리스트 구조로 매 순회하면서 문제를 해결할 수 있는것을 찾음
 - 특정 해결책이 해결을 못하면 자신과 연결된 해결책으로 넘김 
 
 > ### 👉 Composite, Command 유사함
 - 모두 여러 객체를 동일시 취급하는 맥락이 같음
-- 
+
+> ### 👉 재미있는 코드 부분
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/961dbc2d-268e-4623-b238-a63f52e5fe22" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/5e51f4c5-9a1a-4a33-9223-cec5a259727d" width="500" height="500"/>
 
 <br>
 <br>
