@@ -365,6 +365,8 @@
 ### 16. Visitor : 데이터 구조와 특정 처리를 분리
 
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/55519de7-2b6f-4211-adcc-7ca2a3594f3b" width="500" height="500"/>
+
 
 > ### 👉 '데이터 집합'과 '작업'을 분리
 - 해당 패턴의 핵심, 처리를 데이터 집합과 분리하는 것
@@ -380,6 +382,10 @@
 - '처리' 역할을 담당하는 클래스를 추상 클래스로 선언 -> Template Method 
 - '데이터 집합' 역할을 담당하는 클래스를 재귀적 구조가 용이하게 만듦 -> Composite
 
-> ### 👉 Element의 메서드 accept(Visitor v)
+> ### 👉 Element의 메서드 accept(Visitor v), Visitor의 메서드 visit(Element e)
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/3683201f-7248-4f18-9344-9299ac814cf1" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/662b41dd-91fa-4669-9b44-d8538481e357" width="500" height="500"/>
+
 - 해당 패턴은 코드가 재미있음. 이를 더블 디스패치라고도 함
 
