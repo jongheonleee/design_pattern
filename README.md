@@ -2,11 +2,10 @@
 
 ## 📋 목차
 > ### 📌 00. 디자인패턴을 학습하기 앞서
-> ### 📌 01. 인스턴스를 효율적으로 생성(4) 
-> ### 📌 02. 변경되는 부분을 분리(6)
-> ### 📌 03. 분리해놓고 돌아다니면서 처리(2)
-> ### 📌 04. 동일시 취급한다(4) 
-> ### 📌 05. 연결한다(1)
+> ### 📌 01. 인스턴스를 효율적으로 생성한다(4) 
+> ### 📌 02. 변경되는 부분을 분리한다(7)
+> ### 📌 04. 동일시 취급한다(5) 
+> ### 📌 05. 부품으로써 연결한다(1)
 
 <br>
 <br>
@@ -42,7 +41,7 @@
 <br>
 <br>
 
-##  📌 01. 인스턴스를 효율적으로 생성  
+##  📌 01. 인스턴스를 효율적으로 생성한다(4) 
 
 ### 1. Singleton : 자원 절약, 인스턴스 1개 공유
 
@@ -126,7 +125,7 @@
 <br>
 <br>
 
-##  📌 02. 변경되는 부분을 분리
+##  📌 02. 변경되는 부분을 분리한다(7)
 
 ### 5. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
 
@@ -253,14 +252,44 @@
 - 템플릿 메서드는 클래스 단위에서 분리, 상위 클래스 - 하위 클래스
 - Factory Method는 패키지 단위에서 분리, 상위 패키지 - 하위 패키지 
 
+
+### 11. Visitor : 데이터 구조와 특정 처리를 분리
+
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/55519de7-2b6f-4211-adcc-7ca2a3594f3b" width="500" height="500"/>
+
+
+> ### 👉 '데이터 집합'과 '작업'을 분리
+- 해당 패턴의 핵심, 처리를 데이터 집합과 분리하는 것
+- 이를 통해 데이터 집합을 부품으로서의 독립성을 높임, 즉 부품처럼 여러군데에서 사용할 수 있게 만듦
+- 처리와 같이 결합하면, 부품으로서 사용하기 어려움
+- 또한, 처리를 담당하는 클래스는 해당 역할에만 집중할 수 있어서 좋음
+
+> ### 👉 각 역할에 집중하는 구조
+- '데이터 집합'으로 분리된 클래스와 '처리'로 분리된 클래스는 각자의 역할에 집중 할 수 있음
+- SRP 충족
+
+> ### 👉 Composite, Template Method
+- '처리' 역할을 담당하는 클래스를 추상 클래스로 선언 -> Template Method
+- '데이터 집합' 역할을 담당하는 클래스를 재귀적 구조가 용이하게 만듦 -> Composite
+
+> ### 👉 Element의 메서드 accept(Visitor v), Visitor의 메서드 visit(Element e)
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/3683201f-7248-4f18-9344-9299ac814cf1" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/662b41dd-91fa-4669-9b44-d8538481e357" width="500" height="500"/>
+
+- 해당 패턴은 코드가 재미있음. 이를 더블 디스패치라고도 함
+
+
+
 <br>
 <br>
 
-##  📌 03. 동일시 취급한다(다형성 활용)
+##  📌 03. 동일시 취급한다(5)
 
 <br>
 
-### 11. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
+### 12. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9a3cb768-7edc-4adc-922c-2f44629b9f79" width="500" height="500"/>
@@ -275,7 +304,7 @@
 
 <br>
 
-### 12. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+### 13. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/1bf3bf68-7313-4a1c-a45e-75dbf473fe5d" width="500" height="500"/>
@@ -299,7 +328,7 @@
 
 <br>
 
-### 13. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
+### 14. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/6e9d975c-e003-4d66-ace6-1af98276f4d6" width="500" height="500"/>
 
@@ -321,7 +350,7 @@
 
 <br>
 
-### 14. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
+### 15. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/89800a75-d049-4ba8-a4d9-ae7e330c96f7" width="500" height="500"/>
 
@@ -337,7 +366,7 @@
 - Composite 패턴은 '내용'과 '그릇'을 동일시 취급하여 재귀적 구조를 형성함. 예를 들어 폴더와 파일 구조
 - 이와 마찬가지로 Command 패턴은 n개의 명령어를 동일시 취급하여 Composite 패턴의 효과를 볼 수 있음
 
-### 17. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
+### 16. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/11cdb904-97c0-4c7d-8e12-54d216656efe" width="500" height="500"/>
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0452798d-1d2c-46da-a9c2-600a04381444" width="500" height="500"/>
@@ -357,10 +386,10 @@
 <br>
 <br>
 
-##  📌 03. 연결한다(코드 재사용)
+##  📌 03. 부품으로써 연결한다(1)
 <br>
 
-### 15. Adapter : 특정 클래스를 부품으로서 연결하다 
+### 17. Adapter : 특정 클래스를 부품으로서 연결하다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/e1bf5d8d-15e7-43a4-801c-1b91f29d542f" width="500" height="500"/>
 
@@ -373,34 +402,4 @@
 
 <br>
 <br>
-
-## 📌 03. 분리해놓고 돌아다니면서 처리(2)
-<br>
-
-### 16. Visitor : 데이터 구조와 특정 처리를 분리
-
-
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/55519de7-2b6f-4211-adcc-7ca2a3594f3b" width="500" height="500"/>
-
-
-> ### 👉 '데이터 집합'과 '작업'을 분리
-- 해당 패턴의 핵심, 처리를 데이터 집합과 분리하는 것
-- 이를 통해 데이터 집합을 부품으로서의 독립성을 높임, 즉 부품처럼 여러군데에서 사용할 수 있게 만듦
-- 처리와 같이 결합하면, 부품으로서 사용하기 어려움
-- 또한, 처리를 담당하는 클래스는 해당 역할에만 집중할 수 있어서 좋음
-
-> ### 👉 각 역할에 집중하는 구조 
-- '데이터 집합'으로 분리된 클래스와 '처리'로 분리된 클래스는 각자의 역할에 집중 할 수 있음
-- SRP 충족 
-
-> ### 👉 Composite, Template Method
-- '처리' 역할을 담당하는 클래스를 추상 클래스로 선언 -> Template Method 
-- '데이터 집합' 역할을 담당하는 클래스를 재귀적 구조가 용이하게 만듦 -> Composite
-
-> ### 👉 Element의 메서드 accept(Visitor v), Visitor의 메서드 visit(Element e)
-
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/3683201f-7248-4f18-9344-9299ac814cf1" width="500" height="500"/>
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/662b41dd-91fa-4669-9b44-d8538481e357" width="500" height="500"/>
-
-- 해당 패턴은 코드가 재미있음. 이를 더블 디스패치라고도 함
 
