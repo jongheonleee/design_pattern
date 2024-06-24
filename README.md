@@ -141,6 +141,8 @@
 
 ### 6. Abstract Factory : '팩터리'와 '인스턴스의 부품' 추상화
 
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/ccb63493-b18a-49ba-99b8-9122010a1772" width="500" height="500"/>
+
 > ### 👉 Factory Method의 확장버전
 - 두 패턴 모두 '팩터리'를 추상화 했다는 점에서 유사함
 - 하지만, Abstract Factory는 복잡한 인스턴스 생성에 적합한 패턴, 인스턴스를 부품으로 쪼갬, 그리고 부품을 추상화해서 관리
@@ -421,7 +423,9 @@
 ##  📌 03. 인스턴스를 관측과 단순화(4)
 <br>
 
-### 20. Facade : 복잡한 시스템을 관측, 외부에 인터페이스로 제공, 복잡도를 낮춤 
+### 20. Facade : 복잡한 시스템을 가리고 외부에 인터페이스로 제공, 복잡도를 낮춤 
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/16f25005-857e-46f2-9a09-e5ec2c8da0f7" width="500" height="500"/>
 
 > ### 👉 내부와 외부를 분리하여 전체 복잡도를 낮춤
 - Facade가 내부 시스템을 알고있음(관측), 이를 외부에 인터페이스로 제공
