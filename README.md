@@ -2,10 +2,10 @@
 
 ## 📋 목차
 > ### 📌 00. 디자인패턴을 학습하기 앞서
-> ### 📌 01. 인스턴스를 효율적으로 생성(5) 
-> ### 📌 02. 변경되는 부분을 분리(9)
+> ### 📌 01. 인스턴스를 효율적으로 생성(6) 
+> ### 📌 02. 변경되는 부분을 분리(7)
 > ### 📌 04. 동일시 취급(6) 
-> ### 📌 05. 인스턴스를 관측(3)
+> ### 📌 05. 인스턴스를 관측과 단순화(4)
 
 <br>
 <br>
@@ -119,17 +119,44 @@
 > ### 👉 생성자에 매개변수가 많은 경우(4~5 이상)
   - 문제점, 생성자 오버로딩이 많이 일어남, 생성자 매개변수 순서 정보가 명확하지 않음 
   - 내부적으로 Builder 클래스를 선언해서 사용해서 해결
-     
-<br>
-### 5. Abstract Factory :
-
 
 <br>
+
+### 5. Factory Method : '팩터리' 추상화, 상위에 '팩터리'를 추상화 하위에서 구체화
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/64fb1aad-569d-44d5-b9b2-31a96cd270e0" width="500" height="500"/>
+
+> ### 👉 '인스턴스 생성 흐름(팩터리)'과 '인스턴스 생성 방법(구체 팩터리)'을 패키지 단위로 분리
+- 인스턴스 생성 흐름, 방법을 변경 관점에서 분리
+- 이를 패키지 단위로 분리함
+- 상위 패키지는 1개, 하위 패키지는 n개 -> OCP 충족
+
+> ### 👉 템플릿 메서드의 확장 버전
+- 템플릿 메서드는 클래스 단위에서 분리, 상위 클래스 - 하위 클래스
+- Factory Method는 패키지 단위에서 분리, 상위 패키지 - 하위 패키지
+
+> ### 👉 n개의 팩터리와 인스턴스를 묶어서 관리 
+
 <br>
 
-##  📌 02. 변경되는 부분을 분리한다(9)
+### 6. Abstract Factory : '팩터리'와 '인스턴스의 부품' 추상화
 
-### 6. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
+> ### 👉 Factory Method의 확장버전
+- 두 패턴 모두 '팩터리'를 추상화 했다는 점에서 유사함
+- 하지만, Abstract Factory는 복잡한 인스턴스 생성에 적합한 패턴, 인스턴스를 부품으로 쪼갬, 그리고 부품을 추상화해서 관리
+- 추상화된 부품을 결합해서 추상 인스턴스를 생성 -> 다형성 
+
+> ### 👉 추상적인 것에 주목
+- 구체적인 것에 주목하지 않고 추상적인 것에 주목
+- OCP 충족하기 위함 
+
+
+<br>
+<br>
+
+##  📌 02. 변경되는 부분을 분리(8)
+
+### 7. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9459b35d-8b18-48f6-afd3-b4f508a4bf4c" width="500" height="500"/>
 
@@ -145,7 +172,7 @@
 
 <br>
 
-### 7. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
+### 8. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de37b59b-91d9-4b0d-a89b-30a3fb1c16c3" width="500" height="500"/>
@@ -173,7 +200,7 @@
 
 <br>
 
-### 8. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
+### 9. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0f20b692-fcff-4e2f-88e0-40092bd68a80" width="500" height="500"/>
 
@@ -199,7 +226,7 @@
 
 <br>
 
-### 9. Bridge : 기능(선언)과 구현을 타입 단위로 분리
+### 10. Bridge : 기능(선언)과 구현을 타입 단위로 분리
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/cdb6e844-e33c-4054-838f-2e52836ed288" width="500" height="500"/>
 
@@ -217,7 +244,7 @@
 
 <br>
 
-### 10. State : 상태(지속적으로 변경)를 타입 단위로 분리 
+### 11. State : 상태(지속적으로 변경)를 타입 단위로 분리 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de4170c3-a887-46f2-9002-4ba69801175d" width="500" height="500"/>
 
@@ -240,20 +267,6 @@
 - 이는 Command 패턴도 적용됨 
 
 <br>
-
-### 11. Factory Method : '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 분리, 패키지 단위 분리
-
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/64fb1aad-569d-44d5-b9b2-31a96cd270e0" width="500" height="500"/>
-
-> ### 👉 '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 패키지 단위로 분리
-- 인스턴스 생성 흐름, 방법을 변경 관점에서 분리
-- 이를 패키지 단위로 분리함
-- 상위 패키지는 1개, 하위 패키지는 n개 -> OCP 충족
-
-> ### 👉 템플릿 메서드의 확장 버전
-- 템플릿 메서드는 클래스 단위에서 분리, 상위 클래스 - 하위 클래스
-- Factory Method는 패키지 단위에서 분리, 상위 패키지 - 하위 패키지 
-
 
 ### 12. Visitor : 데이터 구조와 특정 처리를 분리
 
@@ -295,10 +308,6 @@
     - 상속
     - 구현
 
-<br>
-
-### 14. Facade : 
-
 
 <br>
 <br>
@@ -307,7 +316,7 @@
 
 <br>
 
-### 15. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
+### 14. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9a3cb768-7edc-4adc-922c-2f44629b9f79" width="500" height="500"/>
@@ -322,7 +331,7 @@
 
 <br>
 
-### 16. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+### 15. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/1bf3bf68-7313-4a1c-a45e-75dbf473fe5d" width="500" height="500"/>
@@ -346,7 +355,7 @@
 
 <br>
 
-### 17. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
+### 16. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/6e9d975c-e003-4d66-ace6-1af98276f4d6" width="500" height="500"/>
 
@@ -368,7 +377,7 @@
 
 <br>
 
-### 18. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
+### 17. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/89800a75-d049-4ba8-a4d9-ae7e330c96f7" width="500" height="500"/>
 
@@ -384,7 +393,7 @@
 - Composite 패턴은 '내용'과 '그릇'을 동일시 취급하여 재귀적 구조를 형성함. 예를 들어 폴더와 파일 구조
 - 이와 마찬가지로 Command 패턴은 n개의 명령어를 동일시 취급하여 Composite 패턴의 효과를 볼 수 있음
 
-### 19. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
+### 18. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/11cdb904-97c0-4c7d-8e12-54d216656efe" width="500" height="500"/>
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0452798d-1d2c-46da-a9c2-600a04381444" width="500" height="500"/>
@@ -403,13 +412,27 @@
 
 <br>
 
-### 20. Interpreter : 
+### 19. Interpreter : 
 
 
 <br>
 <br>
 
-##  📌 03. 인스턴스를 관측(3)
+##  📌 03. 인스턴스를 관측과 단순화(4)
+<br>
+
+### 20. Facade : 복잡한 시스템을 관측, 외부에 인터페이스로 제공, 복잡도를 낮춤 
+
+> ### 👉 내부와 외부를 분리하여 전체 복잡도를 낮춤
+- Facade가 내부 시스템을 알고있음(관측), 이를 외부에 인터페이스로 제공
+- 외부에서는 내부 시스템 사정을 알필요없이 특정 작업 수행 가능
+  - 사용과 내부 상황을 분리하여 단순화함 
+
+
+> ### 👉 Iterator 와 유사
+- Iterator의 경우, 반복 처리 작업과 사용을 분리함. 따라서, 사용하는 쪽에서는 내부 사정을 알필요없음
+- 즉, 복잡도를 낮춤. 단순화함 
+
 <br>
 
 ### 21. Mediator : 
