@@ -2,10 +2,10 @@
 
 ## 📋 목차
 > ### 📌 00. 디자인패턴을 학습하기 앞서
-> ### 📌 01. 인스턴스를 효율적으로 생성한다(4) 
-> ### 📌 02. 변경되는 부분을 분리한다(7)
-> ### 📌 04. 동일시 취급한다(5) 
-> ### 📌 05. 부품으로써 연결한다(1)
+> ### 📌 01. 인스턴스를 효율적으로 생성(5) 
+> ### 📌 02. 변경되는 부분을 분리(9)
+> ### 📌 04. 동일시 취급(6) 
+> ### 📌 05. 인스턴스를 관측(3)
 
 <br>
 <br>
@@ -41,7 +41,7 @@
 <br>
 <br>
 
-##  📌 01. 인스턴스를 효율적으로 생성한다(4) 
+##  📌 01. 인스턴스를 효율적으로 생성(5)
 
 ### 1. Singleton : 자원 절약, 인스턴스 1개 공유
 
@@ -120,14 +120,16 @@
   - 문제점, 생성자 오버로딩이 많이 일어남, 생성자 매개변수 순서 정보가 명확하지 않음 
   - 내부적으로 Builder 클래스를 선언해서 사용해서 해결
      
+<br>
+### 5. Abstract Factory :
 
 
 <br>
 <br>
 
-##  📌 02. 변경되는 부분을 분리한다(7)
+##  📌 02. 변경되는 부분을 분리한다(9)
 
-### 5. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
+### 6. Iterator : 반복해서 처리를 분리함(사용과 구현), 구체적인 반복 처리 과정을 분리(조건식, 반복 처리)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9459b35d-8b18-48f6-afd3-b4f508a4bf4c" width="500" height="500"/>
 
@@ -143,7 +145,7 @@
 
 <br>
 
-### 6. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
+### 7. Template Method Pattern : 세부 내용(변경이 자주 일어나는) 부분을 분리, 상속을 통해 코드 완성, 상위의 전체 틀을 구성하고 하위에서 세부 내용을 결정함 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de37b59b-91d9-4b0d-a89b-30a3fb1c16c3" width="500" height="500"/>
@@ -171,7 +173,7 @@
 
 <br>
 
-### 7. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
+### 8. Strategy : 알고리즘을 분리해서 주입 받아서 사용(특정 문제를 다양한 방식으로 처리가능)
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0f20b692-fcff-4e2f-88e0-40092bd68a80" width="500" height="500"/>
 
@@ -197,7 +199,7 @@
 
 <br>
 
-### 8. Bridge : 기능(선언)과 구현을 타입 단위로 분리
+### 9. Bridge : 기능(선언)과 구현을 타입 단위로 분리
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/cdb6e844-e33c-4054-838f-2e52836ed288" width="500" height="500"/>
 
@@ -215,7 +217,7 @@
 
 <br>
 
-### 9. State : 상태(지속적으로 변경)를 타입 단위로 분리 
+### 10. State : 상태(지속적으로 변경)를 타입 단위로 분리 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/de4170c3-a887-46f2-9002-4ba69801175d" width="500" height="500"/>
 
@@ -239,7 +241,7 @@
 
 <br>
 
-### 10. Factory Method : '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 분리, 패키지 단위 분리
+### 11. Factory Method : '인스턴스 생성 흐름'과 '인스턴스 생성 방법'을 분리, 패키지 단위 분리
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/64fb1aad-569d-44d5-b9b2-31a96cd270e0" width="500" height="500"/>
 
@@ -253,7 +255,7 @@
 - Factory Method는 패키지 단위에서 분리, 상위 패키지 - 하위 패키지 
 
 
-### 11. Visitor : 데이터 구조와 특정 처리를 분리
+### 12. Visitor : 데이터 구조와 특정 처리를 분리
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/55519de7-2b6f-4211-adcc-7ca2a3594f3b" width="500" height="500"/>
@@ -280,16 +282,32 @@
 
 - 해당 패턴은 코드가 재미있음. 이를 더블 디스패치라고도 함
 
+<br> 
+
+### 13. Adapter : 특정 클래스를 부품으로서 연결하다 
+
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/e1bf5d8d-15e7-43a4-801c-1b91f29d542f" width="500" height="500"/>
+
+> ### 👉 '제공된 것' 과 '제공할 것'을 연결
+- 특정 클래스를 부품으로써 재사용하고 싶을 때 주로 사용하는 패턴
+- 핵심은 둘 사이를 연결함, 즉 코드를 동적으로 완성
+  - 코드를 완성하는 방법
+    - 상속
+    - 구현
+
+<br>
+
+### 14. Facade : 
 
 
 <br>
 <br>
 
-##  📌 03. 동일시 취급한다(5)
+##  📌 03. 동일시 취급한다(6)
 
 <br>
 
-### 12. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
+### 15. Composite : 내용과 그릇을 동일시 취급한다, 묶어서 동일시 취급한다 
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/9a3cb768-7edc-4adc-922c-2f44629b9f79" width="500" height="500"/>
@@ -304,7 +322,7 @@
 
 <br>
 
-### 13. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
+### 16. Decorator : 장식과 내용물을 동일시 한다, 상속과 포함을 동시에 구현
 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/1bf3bf68-7313-4a1c-a45e-75dbf473fe5d" width="500" height="500"/>
@@ -328,7 +346,7 @@
 
 <br>
 
-### 14. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
+### 17. Proxy : '대리인'과 '본인'을 동일시함, 대리인(매니저)을 통해 특정 객체를 사용한다 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/6e9d975c-e003-4d66-ace6-1af98276f4d6" width="500" height="500"/>
 
@@ -350,7 +368,7 @@
 
 <br>
 
-### 15. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
+### 18. Command : n개 명령어를 묶어서 하나의 타입으로 표현, 명령어를 집합에 담기 위함  
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/89800a75-d049-4ba8-a4d9-ae7e330c96f7" width="500" height="500"/>
 
@@ -366,7 +384,7 @@
 - Composite 패턴은 '내용'과 '그릇'을 동일시 취급하여 재귀적 구조를 형성함. 예를 들어 폴더와 파일 구조
 - 이와 마찬가지로 Command 패턴은 n개의 명령어를 동일시 취급하여 Composite 패턴의 효과를 볼 수 있음
 
-### 16. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
+### 19. Chain Of Responsibility : n개의 해결책을 하나의 해결책으로 묶음, 동적으로 원하는 해결책으로 처리하기 위함 
 
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/11cdb904-97c0-4c7d-8e12-54d216656efe" width="500" height="500"/>
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/0452798d-1d2c-46da-a9c2-600a04381444" width="500" height="500"/>
@@ -384,21 +402,27 @@
 <img src="https://github.com/jongheonleee/design_pattern/assets/87258372/5e51f4c5-9a1a-4a33-9223-cec5a259727d" width="500" height="500"/>
 
 <br>
+
+### 20. Interpreter : 
+
+
+<br>
 <br>
 
-##  📌 03. 부품으로써 연결한다(1)
+##  📌 03. 인스턴스를 관측(3)
 <br>
 
-### 17. Adapter : 특정 클래스를 부품으로서 연결하다 
+### 21. Mediator : 
 
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/e1bf5d8d-15e7-43a4-801c-1b91f29d542f" width="500" height="500"/>
+<br>
 
-> ### 👉 '제공된 것' 과 '제공할 것'을 연결
-- 특정 클래스를 부품으로써 재사용하고 싶을 때 주로 사용하는 패턴
-- 핵심은 둘 사이를 연결함, 즉 코드를 동적으로 완성
-  - 코드를 완성하는 방법
-    - 상속
-    - 구현
+### 22. Memento :
+
+<br>
+
+### 23. Observer :
+
+<br>
 
 <br>
 <br>
