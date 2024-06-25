@@ -449,7 +449,7 @@
 
 ### 💥 21. Mediator : 객체 간의 복잡한 소통을 외부에서 관리, '중재자'가 통신을 담당  
 
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/b1bd9c4f-b3ec-4002-b316-ca9180468474" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/30d720f9-cde7-4352-8533-80c15eb03c80" width="500" height="500"/>
 
 > ### 👉 복잡도를 낮추기 위해 객체의 역할을 나눔
 - 문제점은 n개의 객체가 소통하는 과정이 복잡함
@@ -478,7 +478,7 @@
 
 ### 💥 23. Observer : 상태 변화를 외부로 분리, '관찰자'가 상태 변화가 관측되면 특정 작업 처리 
 
-<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/30d720f9-cde7-4352-8533-80c15eb03c80" width="500" height="500"/>
+<img src="https://github.com/jongheonleee/design_pattern/assets/87258372/b1bd9c4f-b3ec-4002-b316-ca9180468474" width="500" height="500"/>
 
 > ### 👉 객체의 상태 변화를 외부에서 관측하고 작업을 처리함 -> '관찰자'
 - 특정 상태 변화에 따른 작업 처리를 n개로 확장하기 용이함 
