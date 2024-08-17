@@ -7,6 +7,14 @@
 > ### 📌 04. 동일시 취급(6) 
 > ### 📌 05. 인스턴스를 관측과 단순화(4)
 
+
+<br>
+<br>
+
+## 📌 전체 정리 그림 
+
+<img src="https://github.com/user-attachments/assets/f9e9d68e-f339-48be-bd8a-3f537b56cf16" width="500" height="500"/>
+
 <br>
 <br>
 
