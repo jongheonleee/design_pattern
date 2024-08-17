@@ -13,7 +13,7 @@
 
 ## 📌 전체 정리 그림 
 
-<img src="https://github.com/user-attachments/assets/f9e9d68e-f339-48be-bd8a-3f537b56cf16" width="500" height="500"/>
+<img src="https://github.com/user-attachments/assets/f9e9d68e-f339-48be-bd8a-3f537b56cf16" width="800" height="500"/>
 
 <br>
 <br>
